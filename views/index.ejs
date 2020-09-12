@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <h1>My Node App</h1>
+    <form method="post" action="/item/add">
+      <label for="name">Name</label>
+      <input type="text" name="name" />
+      <input type="submit" value="Add" />
+    </form>
+    <h4>Items:</h4>
+    <ul>
+      <% items.forEach(function(item) { %>
+      <li><%= item.name %></li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
